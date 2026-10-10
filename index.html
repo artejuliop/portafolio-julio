@@ -11,6 +11,13 @@
   </head>
 
   <body>
+
+    <!-- BOTÓN VOLVER ARRIBA -->
+<a href="#inicio"
+   class="btn-subir"
+   aria-label="Volver al inicio">
+    ↑
+</a>
     
     <!-- MENÚ -->
     <header>
@@ -19,7 +26,8 @@
 
     <!-- LOGO / NOMBRE -->
     <a href="#inicio" class="logo">
-        Julio Cesar
+        <img src="assets/logo/jp.logo-principal.png"
+             alt="jp-logo-principal">
     </a>
 
 
@@ -81,76 +89,486 @@
     </nav>
       
     </header>
-
-
+    
     <!-- INICIO -->
-    <section id="inicio">
+<section id="inicio" class="inicio">
 
     <div class="inicio-contenido">
 
-        <!-- TEXTO DE PRESENTACIÓN -->
         <div class="inicio-texto">
 
-            <p data-i18n="inicio.saludo">
+            <p class="inicio-saludo"
+               data-i18n="inicio.saludo">
                 Hola, soy
             </p>
 
-            <h1>
-                Julio Cesar
-            </h1>
+            <h1 class="inicio-nombre">Julio Cesar</h1>
 
-            <h2 data-i18n="inicio.profesion">
+            <h2 class="inicio-profesion"
+                data-i18n="inicio.profesion">
                 Producción gráfica e Impresión digital
             </h2>
 
-            <p data-i18n="inicio.descripcion">
+            <p class="inicio-descripcion"
+               data-i18n="inicio.descripcion">
                 Especializado en diseño, impresión, rotulación,
                 acabados e instalación gráfica.
             </p>
-          
-          <div class="inicio-botones">
 
-    <a href="#proyectos"
-       class="btn btn-principal"
-       data-i18n="inicio.verProyectos">
-        Ver proyectos
-    </a>
+            <div class="inicio-botones">
 
-    <a href="documentos/cv/julio-cesar-cv-es.pdf"
-       class="btn btn-secundario"
-       data-i18n="inicio.verCV">
-        Descargar CV
-    </a>
+                <a href="#proyectos"
+                   class="btn btn-principal"
+                   data-i18n="inicio.verProyectos">
+                    Ver proyectos
+                </a>
 
-          </div>
+                <a href="documentos/cv/julio-cesar-cv-es.pdf"
+                   class="btn btn-secundario"
+                   data-i18n="inicio.verCV">
+                    Descargar CV
+                </a>
 
-        </div>
-      <!--IMAGEN DE PRESENTACIÓN-->
-      <div class="inicio-imagen">
-                  <img src="img/perfil/perfil-julio.webp"
-                 alt="Julio Cesar - Rotulista y profesional de producción gráfica">
+            </div>
 
         </div>
-    
-      </div>
-        
-      
-    </section>
 
+    </div>
+
+    <!-- BARRA DE ESPECIALIDADES -->
+<div class="inicio-barra">
+
+    <div class="especialidad">
+        <span class="especialidad-icono">
+            <img src="assets/iconos/diseno-grafico.svg" alt="icono de diseño gráfico">
+        </span>
+        <span>Diseño gráfico</span>
+    </div>
+
+    <div class="especialidad">
+        <span class="especialidad-icono">
+            <img src="assets/iconos/impresion-digital.svg" alt="icono de impresión digital">
+        </span>
+        <span>Impresión digital y gran formato</span>
+    </div>
+
+    <div class="especialidad">
+        <span class="especialidad-icono">
+            <img src="assets/iconos/rotulacion-interior.svg" alt="icono de rotulación">
+        </span>
+        <span>Rotulación Interior y Exterior</span>
+    </div>
+
+    <div class="especialidad">
+        <span class="especialidad-icono">
+            <img src="assets/iconos/acabados-manipulados.svg" alt="icono de acabados">
+        </span>
+        <span>Acabados y Manipulados</span>
+    </div>
+
+    <div class="especialidad">
+        <span class="especialidad-icono">
+            <img src="assets/iconos/montaje-instalacion.svg" alt="icono de montaje e instalación">
+        </span>
+        <span>Monataje e Instalación</span>
+    </div>
+
+</div>
+
+</section>
 
     <!-- SOBRE MÍ -->
-    <section id="sobre-mi">
-    </section>
+
+<section id="sobre-mi">
+
+    <div class="sobre-mi-contenedor">
+
+        <!-- ENCABEZADO -->
+        <div class="seccion-encabezado">
+
+            <span class="seccion-numero">01</span>
+
+            <div>
+                <p class="seccion-etiqueta"
+                   data-i18n="sobreMi.etiqueta">
+                    SOBRE MÍ
+                </p>
+
+                <h2 data-i18n="sobreMi.titulo">
+                    Experiencia detrás del trabajo
+                </h2>
+            </div>
+
+        </div>
 
 
-    <!-- PROYECTOS -->
-    <section id="proyectos">
-    </section>
+        <div class="sobre-mi-grid">
+
+            <!-- IMAGEN -->
+            <div class="sobre-mi-imagen">
+
+                <div class="imagen-placeholder">
+                    <img src="assets/sobre mi/foto-trabajando.png"
+                         alt="Foto de Julio Cesar trabajando">
+                </div>
+
+            </div>
+
+
+            <!-- INFORMACIÓN -->
+            <div class="sobre-mi-info">
+
+                <p class="sobre-mi-destacado"
+                   data-i18n="sobreMi.destacado">
+                    Producción gráfica, impresión y rotulación
+                    con experiencia práctica en cada etapa del proceso.
+                </p>
+
+                <p class="sobre-mi-descripcion"
+                   data-i18n="sobreMi.descripcion">
+                    Cuento con más de 8 años de experiencia en el sector
+                    gráfico, trabajando en impresión digital, gran formato,
+                    rotulación, acabados e instalación. Mi experiencia abarca
+                    desde la preparación y producción hasta el montaje final
+                    de cada proyecto.
+                </p>
+
+
+                <!-- DATOS -->
+                <div class="sobre-mi-datos">
+
+                    <div class="dato">
+                        <strong>+8</strong>
+                        <span data-i18n="sobreMi.experiencia">
+                            Años de experiencia
+                        </span>
+                    </div>
+
+                    <div class="dato">
+                        <strong>360°</strong>
+                        <span data-i18n="sobreMi.produccion">
+                            Producción integral
+                        </span>
+                    </div>
+
+                    <div class="dato">
+                        <strong>GF</strong>
+                        <span data-i18n="sobreMi.formato">
+                            Gran formato
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================
+     02 - PROYECTOS
+========================================= -->
+
+<section id="proyectos">
+
+    <div class="proyectos-contenedor">
+
+        <!-- ENCABEZADO -->
+        <div class="seccion-encabezado proyectos-encabezado">
+
+            <span class="seccion-numero">02</span>
+
+            <div>
+                <p class="seccion-etiqueta"
+                   data-i18n="proyectos.etiqueta">
+                    PROYECTOS
+                </p>
+
+                <h2 data-i18n="proyectos.titulo">
+                    Trabajos que hablan por sí solos
+                </h2>
+            </div>
+
+        </div>
+        
+        <!-- INTRODUCCIÓN -->
+        <div class="proyectos-intro">
+
+            <p>
+                Una selección de proyectos realizados en producción gráfica,
+                impresión, rotulación, acabados y montaje.
+            </p>
+
+        </div>
+
+
+        <!-- CATEGORÍAS -->
+        <div class="proyectos-grid">
+
+            <!-- 01 ROTULACIÓN DE FACHADAS -->
+
+            <article class="proyecto-card" data-proyecto="fachadas">
+                <div class="proyecto-imagen">
+                    <img src="assets/proyectos/fachadas/portada.jpg"
+                         alt="Rotulación de fachadas">
+                </div>
+
+                <div class="proyecto-info">
+                    <span>01</span>
+                    <h3>Rotulación de fachadas</h3>
+                    <p>Interior y exterior</p>
+                </div>
+            </article>
+
+            <!-- 02 LETRAS CORPÓREAS Y SEÑALÉTICA -->
+
+            <article class="proyecto-card" data-proyecto="letras">
+                <div class="proyecto-imagen">
+                    <img src="assets/proyectos/letras-senaleticas/portada.jpg"
+                         alt="Letras corpóreas y señalética">
+                </div>
+
+                <div class="proyecto-info">
+                    <span>02</span>
+                    <h3>Letras corpóreas y señalética</h3>
+                    <p>Fabricación e instalación</p>
+                </div>
+            </article>
+
+            <!-- 03 IMPRESIÓN GRAN FORMATO -->
+            
+            <article class="proyecto-card" data-proyecto="gran-formato">
+                <div class="proyecto-imagen">
+                    <img src="assets/proyectos/gran-formato/portada.jpg"
+                         alt="Impresión gran formato">
+                </div>
+
+                <div class="proyecto-info">
+                    <span>03</span>
+                    <h3>Impresión gran formato</h3>
+                    <p>Lonas, vinilos y soportes rígidos</p>
+                </div>
+            </article>
+
+            <!-- 04 VINILOS Y DECORACIÓN -->
+             
+            <article class="proyecto-card" data-proyecto="vinilos">
+                <div class="proyecto-imagen">
+                    <img src="assets/proyectos/vinilos-decoracion/portada.jpg"
+                         alt="Vinilos y decoración">
+                </div>
+
+                <div class="proyecto-info">
+                    <span>04</span>
+                    <h3>Vinilos y decoración</h3>
+                    <p>Espacios comerciales e interiores</p>
+                </div>
+            </article>
+
+            <!-- 05 ACABADOS Y MANIPULADOS -->
+
+             <article class="proyecto-card" data-proyecto="acabados">
+                <div class="proyecto-imagen">
+                    <img src="assets/proyectos/acabados/portada.jpg"
+                         alt="Acabados y manipulados">
+                </div>
+
+                <div class="proyecto-info">
+                    <span>05</span>
+                    <h3>Acabados y manipulados</h3>
+                    <p>Producción y terminaciones</p>
+                </div>
+            </article>
+
+            <!-- 06 MONTAJE E INSTALACIÓN -->
+             
+            <article class="proyecto-card" data-proyecto="montaje">
+                <div class="proyecto-imagen">
+                    <img src="assets/proyectos/montaje/portada.jpg"
+                         alt="Montaje e instalación">
+                </div>
+
+                <div class="proyecto-info">
+                    <span>06</span>
+                    <h3>Montaje e instalación</h3>
+                    <p>Instalación gráfica profesional</p>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
 
 
     <!-- PROCESOS -->
-    <section id="procesos">
-    </section>
+
+<section id="procesos" class="procesos">
+
+    <div class="procesos-contenedor">
+
+        <!-- ENCABEZADO -->
+        <div class="procesos-encabezado">
+
+            <span class="seccion-numero">03</span>
+
+            <div>
+                <span class="seccion-etiqueta">PROCESOS</span>
+                <h2>Del diseño a la instalación</h2>
+
+                <p>
+                    Participo en distintas etapas del proceso gráfico,
+                    desde el diseño y preparación de archivos hasta la
+                    producción, acabados e instalación.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- LÍNEA DE PROCESOS -->
+        <div class="procesos-lista">
+
+
+            <!-- 01 DISEÑO -->
+            <article class="proceso-item">
+
+                <span class="proceso-numero">01</span>
+
+                <div class="proceso-imagen">
+                    <img src="assets/procesos/diseno.jpg"
+                         alt="Proceso de diseño gráfico">
+                </div>
+
+                <div class="proceso-info">
+                    <h3>Diseño</h3>
+
+                    <p>
+                        Desarrollo y adaptación de propuestas visuales
+                        preparadas para su producción.
+                    </p>
+
+                    <span>
+                        Concepto · Composición · Artes finales
+                    </span>
+                </div>
+
+            </article>
+
+
+            <!-- 02 PREPARACIÓN -->
+            <article class="proceso-item">
+
+                <span class="proceso-numero">02</span>
+
+                <div class="proceso-imagen">
+                    <img src="assets/procesos/preparacion.jpg"
+                         alt="Preparación de archivos para impresión">
+                </div>
+
+                <div class="proceso-info">
+                    <h3>Preparación</h3>
+
+                    <p>
+                        Revisión y preparación técnica de archivos
+                        antes de entrar a producción.
+                    </p>
+
+                    <span>
+                        Preimpresión · Medidas · Sangrados
+                    </span>
+                </div>
+
+            </article>
+
+
+            <!-- 03 PRODUCCIÓN -->
+            <article class="proceso-item">
+
+                <span class="proceso-numero">03</span>
+
+                <div class="proceso-imagen">
+                    <img src="assets/procesos/produccion.jpg"
+                         alt="Producción e impresión digital">
+                </div>
+
+                <div class="proceso-info">
+                    <h3>Producción</h3>
+
+                    <p>
+                        Manejo y supervisión de procesos de impresión
+                        y producción gráfica.
+                    </p>
+
+                    <span>
+                        Impresión digital · Gran formato · Materiales
+                    </span>
+                </div>
+
+            </article>
+
+
+            <!-- 04 ACABADOS -->
+            <article class="proceso-item">
+
+                <span class="proceso-numero">04</span>
+
+                <div class="proceso-imagen">
+                    <img src="assets/procesos/acabados.jpg"
+                         alt="Acabados de producción gráfica">
+                </div>
+
+                <div class="proceso-info">
+                    <h3>Acabados</h3>
+
+                    <p>
+                        Preparación final de las piezas para garantizar
+                        una presentación limpia y profesional.
+                    </p>
+
+                    <span>
+                        Laminado · Corte · Manipulados
+                    </span>
+                </div>
+
+            </article>
+
+
+            <!-- 05 INSTALACIÓN -->
+            <article class="proceso-item">
+
+                <span class="proceso-numero">05</span>
+
+                <div class="proceso-imagen">
+                    <img src="assets/procesos/instalacion.jpg"
+                         alt="Instalación y montaje de trabajos gráficos">
+                </div>
+
+                <div class="proceso-info">
+                    <h3>Instalación</h3>
+
+                    <p>
+                        Montaje y aplicación final del proyecto
+                        directamente en el espacio del cliente.
+                    </p>
+
+                    <span>
+                        Vinilos · Rotulación · Montaje
+                    </span>
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
 
 
     <!-- CONTÁCTAME -->
@@ -161,6 +579,81 @@
     <!-- PIE DE PÁGINA -->
     <footer>
     </footer>
+
+    <!-- ========================================
+     GALERÍA DE PROYECTOS
+========================================= -->
+
+<div class="galeria-modal" id="galeriaModal">
+
+    <!-- CERRAR -->
+    <button class="galeria-cerrar" id="galeriaCerrar"
+            aria-label="Cerrar galería">
+        ×
+    </button>
+
+    <!-- ENCABEZADO -->
+
+    <div class="galeria-titulo">
+    <span id="galeriaNumero">01</span>
+    <h2 id="galeriaTitulo">Rotulación de fachadas</h2>
+</div>
+
+    <!-- IMAGEN PRINCIPAL -->
+
+    <!-- ========================================
+     CARRUSEL DE IMÁGENES
+========================================= -->
+
+<div class="galeria-contenido">
+
+    <!-- FLECHA IZQUIERDA -->
+    <button class="galeria-flecha galeria-anterior"
+            aria-label="Imagen anterior">
+        ‹
+    </button>
+
+
+    <!-- IMAGEN ANTERIOR -->
+    <div class="galeria-slide galeria-slide-anterior">
+        <img id="galeriaImagenAnterior"
+             src="assets/proyectos/fachadas/fachada-03.jpg"
+             alt="Proyecto anterior">
+    </div>
+
+
+    <!-- IMAGEN PRINCIPAL -->
+    <div class="galeria-slide galeria-slide-activa">
+        <img id="galeriaImagen"
+             src="assets/proyectos/fachadas/fachada-01.jpg"
+             alt="Proyecto de rotulación de fachadas">
+    </div>
+
+
+    <!-- IMAGEN SIGUIENTE -->
+    <div class="galeria-slide galeria-slide-siguiente">
+        <img id="galeriaImagenSiguiente"
+             src="assets/proyectos/fachadas/fachada-02.jpg"
+             alt="Proyecto siguiente">
+    </div>
+
+
+    <!-- FLECHA DERECHA -->
+    <button class="galeria-flecha galeria-siguiente"
+            aria-label="Imagen siguiente">
+        ›
+    </button>
+
+</div>
+
+    <!-- CONTADOR -->
+    <div class="galeria-contador">
+        <span id="imagenActual">1</span>
+        /
+        <span id="totalImagenes">3</span>
+    </div>
+
+</div>
 
     <script src="js/main.js"></script>
     
