@@ -381,6 +381,8 @@ galeriaTitulo.textContent =
 
         galeriaModal.classList.add('activa');
         document.body.style.overflow = 'hidden';
+        history.pushState({ galeriaAbierta: true }, '');
+
 
     });
 
@@ -390,13 +392,22 @@ galeriaTitulo.textContent =
    CERRAR GALERÍA
 ======================================== */
 
+
 cerrarGaleria.addEventListener('click', () => {
-
-    galeriaModal.classList.remove('activa');
-
-    document.body.style.overflow = '';
-
+    if (history.state?.galeriaAbierta) {
+        history.back();
+    } else {
+        cerrarGaleriaModal();
+    }
 });
+
+
+function cerrarGaleriaModal() {
+    galeriaModal.classList.remove('activa');
+    document.body.style.overflow = '';
+    reiniciarZoom();
+}
+
 
 /* ========================================
    SIGUIENTE FOTO
@@ -462,14 +473,70 @@ slideSiguiente.addEventListener('click', () => {
    CERRAR CON ESC
 ======================================== */
 
+
 document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' &&
+        galeriaModal.classList.contains('activa')) {
 
-    if (event.key === 'Escape') {
+        if (history.state?.galeriaAbierta) {
+            history.back();
+        } else {
+            cerrarGaleriaModal();
+        }
+    }
+});
 
-        galeriaModal.classList.remove('activa');
 
-        document.body.style.overflow = '';
 
+/* ========================================
+   DESLIZAMIENTO TÁCTIL DE LA GALERÍA
+======================================== */
+
+let touchInicioX = 0;
+let touchInicioY = 0;
+
+galeriaModal.addEventListener('touchstart', (event) => {
+    if (!galeriaModal.classList.contains('activa')) return;
+
+    // No interferir con el zoom
+    if (nivelZoom > 1) return;
+
+    if (event.touches.length !== 1) return;
+
+    touchInicioX = event.touches[0].clientX;
+    touchInicioY = event.touches[0].clientY;
+}, { passive: true });
+
+galeriaModal.addEventListener('touchend', (event) => {
+    if (!galeriaModal.classList.contains('activa')) return;
+    if (nivelZoom > 1) return;
+    if (event.changedTouches.length !== 1) return;
+
+    const diferenciaX = event.changedTouches[0].clientX - touchInicioX;
+    const diferenciaY = event.changedTouches[0].clientY - touchInicioY;
+
+    // Evitar que un movimiento vertical cambie de foto
+    if (Math.abs(diferenciaX) < 50 ||
+        Math.abs(diferenciaX) <= Math.abs(diferenciaY)) {
+        return;
     }
 
+    if (diferenciaX < 0) {
+        // Deslizar a la izquierda: siguiente foto
+        botonSiguiente.click();
+    } else {
+        // Deslizar a la derecha: foto anterior
+        botonAnterior.click();
+    }
+}, { passive: true });
+
+
+/* ========================================
+   BOTÓN ATRÁS DEL MÓVIL
+======================================== */
+
+window.addEventListener('popstate', () => {
+    if (galeriaModal.classList.contains('activa')) {
+        cerrarGaleriaModal();
+    }
 });
