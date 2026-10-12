@@ -231,7 +231,7 @@ body {
             rgba(0, 0, 0, 0.50) 55%,
             rgba(0, 0, 0, 0.12) 100%
         ),
-        url("../assets/img/julio-portada.png");
+        url("../assets/img/julio-portada.webp");
 
     background-size: cover;
     background-position: center;
