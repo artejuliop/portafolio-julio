@@ -368,7 +368,12 @@ tarjetasProyectos.forEach((tarjeta) => {
         );
 
         galeriaNumero.textContent = proyecto.numero;
-        galeriaTitulo.textContent = proyecto.titulo;
+        galeriaTitulo.dataset.i18n = `proyectos.${proyectoActual === "gran-formato" ? "granFormato" : proyectoActual}.titulo`;
+
+galeriaTitulo.textContent =
+    traducciones[document.documentElement.lang]?.[
+        galeriaTitulo.dataset.i18n
+    ] || proyecto.titulo;
 
         imagenActual = 0;
 

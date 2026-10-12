@@ -26,7 +26,7 @@
 
     <!-- LOGO / NOMBRE -->
     <a href="#inicio" class="logo">
-        <img src="assets/logo/jp.logo-principal.png"
+        <img src="assets/logo/logo-01.svg"
              alt="jp-logo-principal">
     </a>
 
@@ -106,15 +106,9 @@
 
             <h2 class="inicio-profesion"
                 data-i18n="inicio.profesion">
-                Producción gráfica e Impresión digital
+                ESPECIALISTA EN PRODUCCIÓN GRÁFICA E IMPRESIÓN DIGITAL
             </h2>
-
-            <p class="inicio-descripcion"
-               data-i18n="inicio.descripcion">
-                Especializado en diseño, impresión, rotulación,
-                acabados e instalación gráfica.
-            </p>
-
+            
             <div class="inicio-botones">
 
                 <a href="#proyectos"
@@ -123,11 +117,12 @@
                     Ver proyectos
                 </a>
 
-                <a href="documentos/cv/julio-cesar-cv-es.pdf"
-                   class="btn btn-secundario"
-                   data-i18n="inicio.verCV">
-                    Descargar CV
-                </a>
+                <a href="assets/cv/julio-cesar-cv-es.pdf"
+                class="btn btn-secundario descargar-cv"
+                data-i18n="inicio.verCV"
+                download>
+                Descargar CV
+            </a>
 
             </div>
 
@@ -142,35 +137,45 @@
         <span class="especialidad-icono">
             <img src="assets/iconos/diseno-grafico.svg" alt="icono de diseño gráfico">
         </span>
-        <span>Diseño gráfico</span>
+        <span data-i18n="especialidad.diseno">
+    Diseño gráfico
+</span>
     </div>
 
     <div class="especialidad">
         <span class="especialidad-icono">
             <img src="assets/iconos/impresion-digital.svg" alt="icono de impresión digital">
         </span>
-        <span>Impresión digital y gran formato</span>
+        <span data-i18n="especialidad.impresion">
+    Impresión digital y gran formato
+</span>
     </div>
 
     <div class="especialidad">
         <span class="especialidad-icono">
             <img src="assets/iconos/rotulacion-interior.svg" alt="icono de rotulación">
         </span>
-        <span>Rotulación Interior y Exterior</span>
+        <span data-i18n="especialidad.rotulacion">
+    Rotulación interior y exterior
+</span>
     </div>
 
     <div class="especialidad">
         <span class="especialidad-icono">
             <img src="assets/iconos/acabados-manipulados.svg" alt="icono de acabados">
         </span>
-        <span>Acabados y Manipulados</span>
+        <span data-i18n="especialidad.acabados">
+    Acabados y manipulados
+</span>
     </div>
 
     <div class="especialidad">
         <span class="especialidad-icono">
             <img src="assets/iconos/montaje-instalacion.svg" alt="icono de montaje e instalación">
         </span>
-        <span>Monataje e Instalación</span>
+        <span data-i18n="especialidad.montaje">
+    Montaje e instalación
+</span>
     </div>
 
 </div>
@@ -296,13 +301,11 @@
         
         <!-- INTRODUCCIÓN -->
         <div class="proyectos-intro">
-
-            <p>
+            <p data-i18n="proyectos.intro">
                 Una selección de proyectos realizados en producción gráfica,
                 impresión, rotulación, acabados y montaje.
             </p>
-
-        </div>
+</div>
 
 
         <!-- CATEGORÍAS -->
@@ -317,9 +320,12 @@
                 </div>
 
                 <div class="proyecto-info">
-                    <span>01</span>
-                    <h3>Rotulación de fachadas</h3>
-                    <p>Interior y exterior</p>
+                    <h3 data-i18n="proyectos.fachadas.titulo">
+                        Rotulación de fachadas
+                    </h3>
+                    <p data-i18n="proyectos.fachadas.descripcion">
+                        Interior y exterior
+                    </p>
                 </div>
             </article>
 
@@ -332,9 +338,12 @@
                 </div>
 
                 <div class="proyecto-info">
-                    <span>02</span>
-                    <h3>Letras corpóreas y señalética</h3>
-                    <p>Fabricación e instalación</p>
+                    <h3 data-i18n="proyectos.letras.titulo">
+                        Letras corpóreas y señalética
+                    </h3>
+                    <p data-i18n="proyectos.letras.descripcion">
+                        Fabricación e instalación
+                    </p>
                 </div>
             </article>
 
@@ -347,9 +356,12 @@
                 </div>
 
                 <div class="proyecto-info">
-                    <span>03</span>
-                    <h3>Impresión gran formato</h3>
-                    <p>Lonas, vinilos y soportes rígidos</p>
+                    <h3 data-i18n="proyectos.granFormato.titulo">
+                        Impresión gran formato
+                    </h3>
+                    <p data-i18n="proyectos.granFormato.descripcion">
+                        Lonas, vinilos y soportes rígidos
+                    </p>
                 </div>
             </article>
 
@@ -362,10 +374,13 @@
                 </div>
 
                 <div class="proyecto-info">
-                    <span>04</span>
-                    <h3>Vinilos y decoración</h3>
-                    <p>Espacios comerciales e interiores</p>
-                </div>
+    <h3 data-i18n="proyectos.vinilos.titulo">
+        Vinilos y decoración
+    </h3>
+    <p data-i18n="proyectos.vinilos.descripcion">
+        Espacios comerciales e interiores
+    </p>
+</div>
             </article>
 
             <!-- 05 ACABADOS Y MANIPULADOS -->
@@ -377,10 +392,13 @@
                 </div>
 
                 <div class="proyecto-info">
-                    <span>05</span>
-                    <h3>Acabados y manipulados</h3>
-                    <p>Producción y terminaciones</p>
-                </div>
+    <h3 data-i18n="proyectos.acabados.titulo">
+        Acabados y manipulados
+    </h3>
+    <p data-i18n="proyectos.acabados.descripcion">
+        Producción y terminaciones
+    </p>
+</div>
             </article>
 
             <!-- 06 MONTAJE E INSTALACIÓN -->
@@ -392,10 +410,13 @@
                 </div>
 
                 <div class="proyecto-info">
-                    <span>06</span>
-                    <h3>Montaje e instalación</h3>
-                    <p>Instalación gráfica profesional</p>
-                </div>
+    <h3 data-i18n="proyectos.montaje.titulo">
+        Montaje e instalación
+    </h3>
+    <p data-i18n="proyectos.montaje.descripcion">
+        Instalación gráfica profesional
+    </p>
+</div>
             </article>
 
         </div>
@@ -417,10 +438,16 @@
             <span class="seccion-numero">03</span>
 
             <div>
-                <span class="seccion-etiqueta">PROCESOS</span>
-                <h2>Del diseño a la instalación</h2>
+                <span class="seccion-etiqueta"
+      data-i18n="procesos.etiqueta">
+    PROCESOS
+</span>
 
-                <p>
+<h2 data-i18n="procesos.titulo">
+    Del diseño a la instalación
+</h2>
+
+                <p data-i18n="procesos.descripcion">
                     Participo en distintas etapas del proceso gráfico,
                     desde el diseño y preparación de archivos hasta la
                     producción, acabados e instalación.
@@ -445,17 +472,17 @@
                 </div>
 
                 <div class="proceso-info">
-                    <h3>Diseño</h3>
+    <h3 data-i18n="procesos.diseno.titulo">Diseño</h3>
 
-                    <p>
-                        Desarrollo y adaptación de propuestas visuales
-                        preparadas para su producción.
-                    </p>
+    <p data-i18n="procesos.diseno.descripcion">
+        Desarrollo y adaptación de propuestas visuales
+        preparadas para su producción.
+    </p>
 
-                    <span>
-                        Concepto · Composición · Artes finales
-                    </span>
-                </div>
+    <span data-i18n="procesos.diseno.detalles">
+        Concepto · Composición · Artes finales
+    </span>
+</div>
 
             </article>
 
@@ -471,17 +498,17 @@
                 </div>
 
                 <div class="proceso-info">
-                    <h3>Preparación</h3>
+    <h3 data-i18n="procesos.preparacion.titulo">Preparación</h3>
 
-                    <p>
-                        Revisión y preparación técnica de archivos
-                        antes de entrar a producción.
-                    </p>
+    <p data-i18n="procesos.preparacion.descripcion">
+        Revisión y preparación técnica de archivos
+        antes de entrar a producción.
+    </p>
 
-                    <span>
-                        Preimpresión · Medidas · Sangrados
-                    </span>
-                </div>
+    <span data-i18n="procesos.preparacion.detalles">
+        Preimpresión · Medidas · Sangrados
+    </span>
+</div>
 
             </article>
 
@@ -497,17 +524,17 @@
                 </div>
 
                 <div class="proceso-info">
-                    <h3>Producción</h3>
+    <h3 data-i18n="procesos.produccion.titulo">Producción</h3>
 
-                    <p>
-                        Manejo y supervisión de procesos de impresión
-                        y producción gráfica.
-                    </p>
+    <p data-i18n="procesos.produccion.descripcion">
+        Manejo y supervisión de procesos de impresión
+        y producción gráfica.
+    </p>
 
-                    <span>
-                        Impresión digital · Gran formato · Materiales
-                    </span>
-                </div>
+    <span data-i18n="procesos.produccion.detalles">
+        Impresión digital · Gran formato · Materiales
+    </span>
+</div>
 
             </article>
 
@@ -523,17 +550,17 @@
                 </div>
 
                 <div class="proceso-info">
-                    <h3>Acabados</h3>
+    <h3 data-i18n="procesos.acabados.titulo">Acabados</h3>
 
-                    <p>
-                        Preparación final de las piezas para garantizar
-                        una presentación limpia y profesional.
-                    </p>
+    <p data-i18n="procesos.acabados.descripcion">
+        Preparación final de las piezas para garantizar
+        una presentación limpia y profesional.
+    </p>
 
-                    <span>
-                        Laminado · Corte · Manipulados
-                    </span>
-                </div>
+    <span data-i18n="procesos.acabados.detalles">
+        Laminado · Corte · Manipulados
+    </span>
+</div>
 
             </article>
 
@@ -549,17 +576,17 @@
                 </div>
 
                 <div class="proceso-info">
-                    <h3>Instalación</h3>
+    <h3 data-i18n="procesos.instalacion.titulo">Instalación</h3>
 
-                    <p>
-                        Montaje y aplicación final del proyecto
-                        directamente en el espacio del cliente.
-                    </p>
+    <p data-i18n="procesos.instalacion.descripcion">
+        Montaje y aplicación final del proyecto
+        directamente en el espacio del cliente.
+    </p>
 
-                    <span>
-                        Vinilos · Rotulación · Montaje
-                    </span>
-                </div>
+    <span data-i18n="procesos.instalacion.detalles">
+        Vinilos · Rotulación · Montaje
+    </span>
+</div>
 
             </article>
 
@@ -571,13 +598,225 @@
 </section>
 
 
-    <!-- CONTÁCTAME -->
-    <section id="contactame">
-    </section>
+<!-- =====================================
+     04. CONTÁCTAME
+===================================== -->
 
+<section id="contactame">
+
+    <div class="contacto-contenedor">
+
+        <!-- ENCABEZADO -->
+        <div class="contacto-encabezado">
+    <span class="seccion-numero">04</span>
+    <span class="seccion-etiqueta" data-i18n="contacto.etiqueta">
+        CONTÁCTAME
+    </span>
+</div>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="contacto-grid">
+
+            <!-- COLUMNA IZQUIERDA -->
+            <div class="contacto-presentacion">
+
+                <h2 data-i18n="contacto.titulo">
+    ¿Hablamos de una oportunidad laboral?
+</h2>
+
+<div class="contacto-linea"></div>
+
+<p data-i18n="contacto.descripcion1">
+    Cuento con más de 8 años de experiencia
+    en producción gráfica, impresión digital,
+    rotulación, acabados e instalación.
+</p>
+
+<p data-i18n="contacto.descripcion2">
+    Estoy interesado en nuevas oportunidades
+    laborales en España y Europa,
+    donde pueda aportar mis conocimientos
+    y seguir desarrollándome profesionalmente.
+</p>
+
+                <!-- ESPECIALIDADES -->
+                <div class="contacto-especialidades">
+    <span data-i18n="contacto.especialidad1">Producción gráfica</span>
+    <span data-i18n="contacto.especialidad2">Gran formato</span>
+    <span data-i18n="contacto.especialidad3">Rotulación</span>
+</div>
+
+            </div>
+
+            <!-- COLUMNA DERECHA -->
+            <div class="contacto-tarjeta">
+
+                <!-- PERFIL -->
+                <div class="contacto-perfil">
+
+                    <div class="contacto-avatar">
+                        <img src="assets/iconos/persona-01.svg"
+                        alt="contanto-avatar">
+                    </div>
+
+                    <div class="contacto-perfil-info">
+    <h3>Julio Cesar</h3>
+    <p data-i18n="contacto.profesion">
+        Profesional de producción gráfica
+    </p>
+</div>
+
+                </div>
+
+                <!-- DATOS PROFESIONALES -->
+                <div class="contacto-detalles">
+
+                    <!-- TELÉFONO -->
+                    <div class="contacto-dato">
+
+                        <img src="assets/iconos/telefono-01.svg"
+                        alt="icono de teléfono" class="contacto-icono">
+
+                        <div>
+                            <small data-i18n="contacto.telefono">
+    TELÉFONO / WHATSAPP
+</small>
+                            <a href="tel:+34614945455">
+                                +34 614 94 54 55
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- CORREO -->
+                    <div class="contacto-dato">
+
+                        <img src="assets/iconos/correo-01.svg"
+                        alt="icono de correo electrónico" class="contacto-icono">
+
+                        <div>
+                            <small data-i18n="contacto.correo">
+    CORREO ELECTRÓNICO
+</small>
+                            <a href="mailto:arte.juliop@gmail.com">
+                                arte.juliop@gmail.com
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- UBICACIÓN -->
+                    <div class="contacto-dato">
+
+                        <img src="assets/iconos/ubicacion-01.svg"
+                        alt="icono de ubicación" class="contacto-icono">
+
+                        <div>
+                            <small data-i18n="contacto.ubicacion">
+    UBICACIÓN ACTUAL
+</small>
+
+<p data-i18n="contacto.ciudad">
+    Sevilla, España
+</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- BOTONES -->
+                <div class="contacto-acciones">
+
+                   <a href="assets/cv/julio-cesar-cv-es.pdf"
+                   class="contacto-btn contacto-btn-principal descargar-cv"
+                   data-i18n="contacto.descargarCV"
+                   download>
+
+                    <img src="assets/iconos/descargar-pdf-01.svg"
+                    alt="Icono de descargar PDF">
+                    Descargar CV
+                </a>
+
+
+                    <a href="https://wa.me/34614945455"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contacto-btn contacto-btn-secundario">
+                        
+<svg class="whatsapp-svg"
+     xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 123.47 124.21"
+     aria-hidden="true">
+
+    <path fill="currentColor"
+          d="M123.37,57.09C121.75,27.24,96.07,1.68,66.12.09,43.25-1.12,22.46,9.62,10.49,28.8c-11.98,19.19-12.58,42.56-1.66,62.64L0,124.21l33.32-8.81c20.19,10.31,43.36,9.29,62.09-2.77,18.74-12.06,29.2-32.83,27.97-55.54ZM22.83,88.55c-8.89-12.98-10.83-29.59-5.17-44.43,5.67-14.87,17.68-25.56,32.95-29.32,17.44-4.3,35.03,1.03,47.06,14.25,12.01,13.2,15.66,31.19,9.75,48.13-4.78,13.72-15.47,24.35-29.33,29.17-14.12,4.91-29.43,3.14-42-4.85l-.6-.38-16.6,4.24,4.37-16.18-.43-.62Z"/>
+
+    <path fill="currentColor"
+          d="M71.29,90.5c2.07.56,4.21.84,6.31.84,4.11,0,8.05-1.05,10.94-3.04,3.21-2.21,5.11-5.48,5.5-9.47.14-1.47.39-3.94-1.24-5.24l-.35-.21c-1.62-.73-3.26-1.58-4.84-2.41-2.14-1.12-4.36-2.28-6.67-3.2l-.32-.13c-1.29-.53-3.46-1.41-5.25.02l-5.62,6.9c-.22.12-.64,0-1.68-.48-.21-.1-.42-.2-.63-.28-6.41-2.73-12.4-7.68-16.43-13.57l-.37-.52c-.42-.59-1.69-2.39-1.58-2.96.18-.45,1.09-1.49,1.75-2.25.82-.95,1.68-1.92,2.17-2.8.93-1.63,1.34-2.51.62-4.72-.6-1.84-4.43-11.45-5.73-13.08-.23-.29-1.06-1.26-2.04-1.56-1.22-.38-5.08-.27-6.09-.1,0,0,0,0,0,0-4.22.72-7.88,7.52-8.62,10.11-2.76,9.64,2.37,18.05,8.32,25.71,9.01,11.59,19.72,19.14,31.81,22.45Z"/>
+
+</svg>
+
+                        WhatsApp
+                    </a>
+
+
+    </div>
+
+</section>
 
     <!-- PIE DE PÁGINA -->
     <footer>
+        
+<!-- ==========================================
+     FOOTER - PIE DE PÁGINA
+========================================== -->
+
+<footer class="footer">
+
+    <div class="footer-contenedor">
+
+        <div class="footer-superior">
+
+            <!-- IDENTIDAD -->
+            <div class="footer-identidad">
+
+                <a href="#inicio" class="footer-logo"
+                   aria-label="Volver al inicio">
+                    <img src="assets/logo/logo-01.svg"
+                         alt="jp-logo-principal" class="footer-logo-img">
+                </a>
+
+            </div>
+
+            <!-- NAVEGACIÓN -->
+            <nav class="footer-navegacion"
+     aria-label="Navegación del pie de página">
+
+    <a href="#inicio" data-i18n="nav.inicio">Inicio</a>
+    <a href="#sobre-mi" data-i18n="nav.sobreMi">Sobre mí</a>
+    <a href="#proyectos" data-i18n="nav.proyectos">Proyectos</a>
+    <a href="#procesos" data-i18n="nav.procesos">Procesos</a>
+    <a href="#contactame" data-i18n="nav.contactame">Contáctame</a>
+
+</nav>
+
+        </div>
+
+        <div class="footer-inferior">
+    <p data-i18n="footer.derechos">
+        © 2026 Julio Cesar. Todos los derechos reservados.
+    </p>
+
+    <span data-i18n="contacto.ciudad">
+        Sevilla, España
+    </span>
+</div>
+
+    </div>
+
+</footer>
+
     </footer>
 
     <!-- ========================================
@@ -655,7 +894,8 @@
 
 </div>
 
-    <script src="js/main.js"></script>
+<script src="js/main.js"></script>
+<script src="js/idiomas.js"></script>
     
     </body>
 

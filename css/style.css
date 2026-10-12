@@ -1,8 +1,16 @@
+/* PORTAFOLIO JULIO CESAR — CSS ORGANIZADO
+   Mantiene los estilos de escritorio originales y agrupa responsive al final.
+*/
+
+/* ========================================
+   01. VARIABLES Y ESTILOS GENERALES
+======================================== */
+
 :root {
     --color-fondo: #000000;
-    --color-texto: #10e929;
+    --color-texto: #101fe9;
     --color-secundario: #b5b5b5;
-    --color-azul: #edd72f;
+    --color-azul: #ff8a00;
 }
 
 /* ========================================
@@ -58,6 +66,11 @@ body {
     background-color: #0f0f0f;
     color: #ffffff;
 }
+
+/* ========================================
+   02. HEADER Y NAVEGACIÓN
+======================================== */
+
 /* ========================================
    HEADER - ESCRITORIO
 ======================================== */
@@ -121,7 +134,7 @@ nav {
 /* EFECTO AL PASAR EL MOUSE */
 
 .nav-menu a:hover {
-    color: #06dc2d;
+    color: #ff8a00;
 }
 
 /* BOTÓN CONTÁCTAME */
@@ -145,10 +158,15 @@ nav {
 
 /* IDIOMAS */
 
+
 .language-selector {
     display: flex;
     align-items: center;
     gap: 10px;
+    background-color: #1e1e1e;     /* Color de fondo del rectángulo contenedor */
+    border: 1px solid #ff8a00;     /* Borde que delimita el conjunto (cámbialo si prefieres otro color) */
+    border-radius: 8px;            /* El secreto de las esquinas redondeadas para el conjunto */
+    padding: 8px 15px;             /* Espacio interno para que los botones no toquen el borde */
 }
 
 .language-selector button {
@@ -173,6 +191,11 @@ nav {
 .menu-toggle {
     display: none;
 }
+
+/* ========================================
+   03. INICIO
+======================================== */
+
 /* ==================================================
    HERO / INICIO
 ================================================== */
@@ -233,8 +256,8 @@ body {
 .inicio-saludo {
     margin: 0 0 14px;
 
-    font-size: 80px;
-    font-weight: 400;
+    font-size: 50px;
+    font-weight: 300;
     transform: translateY(-40px);
 }
 
@@ -243,27 +266,28 @@ body {
 #inicio h1 {
     margin: 0 0 20px;
 
-    font-size: clamp(100px, 6vw, 500px);
+    font-size: clamp(115px, 6vw, 500px);
     line-height: 0.95;
 
     font-weight: 700;
     transform: translateY(-40px);
+    color: #ff8a00;
 }
 
 
 /* PROFESIÓN */
 
 #inicio h2 {
-    margin: 0 0 22px;
-
-    font-size: clamp(27px, 2.4vw, 40px);
+    margin: 0 0 20px;
+    font-size: clamp(18px, 2.4vw, 22px);
     line-height: 1.15;
-
     font-weight: 500;
-    transform: translateY(-40px);
+    transform: translateY(-30px);
+    letter-spacing: 2px;
 }
-
-
+#inicio .profesion-linea {
+    display: block;
+}
 /* DESCRIPCIÓN */
 
 .inicio-descripcion {
@@ -285,139 +309,6 @@ body {
     gap: 16px;
 
     flex-wrap: wrap;
-}
-
-
-/* ==================================================
-   TABLET
-================================================== */
-
-@media (max-width: 1000px) {
-
-    #inicio {
-        background-position: 60% center;
-    }
-
-    #inicio .inicio-contenido {
-        max-width: 650px;
-    }
-}
-
-
-/* ==================================================
-   MÓVIL
-================================================== */
-
-@media (max-width: 768px) {
-
-    header {
-        position: fixed;
-        background: rgba(10, 10, 10, 0.95);
-    }
-
-    nav {
-        width: calc(100% - 24px);
-        height: 64px;
-        position: relative;
-    }
-
-    .language-selector {
-        margin-left: auto;
-        margin-right: 12px;
-    }
-
-    .nav-menu {
-        position: absolute;
-        top: 64px;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 18px;
-        width: 100%;
-        padding: 18px 20px 22px;
-        background: rgba(10, 10, 10, 0.98);
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-10px);
-        transition: all 0.25s ease;
-        pointer-events: none;
-    }
-
-    .nav-menu.activo {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-        pointer-events: auto;
-    }
-
-    .menu-toggle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 42px;
-        height: 42px;
-        background: transparent;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 8px;
-        color: #ffffff;
-        font-size: 22px;
-        cursor: pointer;
-    }
-
-    #inicio {
-        min-height: 100svh;
-
-        padding: 120px 24px 45px;
-
-        align-items: flex-end;
-
-        background-position: 62% center;
-
-        background-image:
-            linear-gradient(
-                180deg,
-                rgba(0, 0, 0, 0.15) 0%,
-                rgba(0, 0, 0, 0.25) 35%,
-                rgba(0, 0, 0, 0.90) 70%,
-                rgba(0, 0, 0, 0.98) 100%
-            ),
-            url("../assets/img/julio-portada.png");
-    }
-
-/* CONTENIDO */
-
-    #inicio .inicio-contenido {
-        width: 100%;
-        max-width: 100%;
-    }
-
-
-    .inicio-saludo {
-        font-size: 45px;
-    }
-
-
-    #inicio h1 {
-        font-size: clamp(48px, 15vw, 70px);
-        margin-bottom: 18px;
-    }
-
-
-    #inicio h2 {
-        font-size: 24px;
-    }
-
-
-    .inicio-descripcion {
-        font-size: 16px;
-    }
-
-
-    .inicio-botones {
-        gap: 12px;
-    }
 }
 
 /* ========================================
@@ -501,7 +392,7 @@ body {
 
     padding: 15px 5%;
 
-    background: rgba(10, 10, 10, 0.92);
+    background: #17171786;
     backdrop-filter: blur(8px);
 
     z-index: 10;
@@ -543,62 +434,39 @@ body {
 }
 
 /* ========================================
-   SECCIÓN SOBRE MÍ
+   04. SOBRE MÍ
 ======================================== */
-
-#sobre-mi {
-   background-color: #111111;
-    color: #ffffff;
-
-    min-height: 100vh;
-    padding: 50px 5%;
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-}
-
-.sobre-mi-contenedor {
-    width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
-}
-
-
 /* ENCABEZADO DE SECCIÓN */
 
 .seccion-encabezado {
     display: flex;
     align-items: flex-start;
     gap: 22px;
-
     margin-bottom: 65px;
 }
 
 .seccion-numero {
-    color: #ff0000;
-
+    color: #ff8a00;
     font-size: 15px;
     font-weight: 700;
 
-    padding-top: 8px;
+    padding-top: 0;
+    line-height: 1.4;
 }
 
 .seccion-etiqueta {
-    color: #10d213;
-
+    color: #ff8a00;
     font-size: 14px;
     font-weight: 700;
-
     letter-spacing: 2px;
 
     margin: 0 0 8px;
+    line-height: 1.5;
 }
 
 .seccion-encabezado h2 {
     margin: 0;
-
-    font-size: clamp(32px, 3.2vw, 25px);
+    font-size: clamp(25px, 3.2vw, 40px);
     line-height: 1.1;
     font-weight: 700;
 }
@@ -625,10 +493,10 @@ body {
     overflow: hidden;
 
     background-color: #1c1c1c;
-    border: 1px solid #333333;
+    border: 2px solid #ff8a00;
     border-radius: 18px;
     box-shadow:   0 20px 50px rgba(0, 0, 0, 0.55),
-    0 0 30px rgba(0, 140, 255, 0.12);
+    0 0 30px rgba(5, 63, 110, 0.12);
 }
 
 .imagen-placeholder img {
@@ -642,20 +510,22 @@ body {
 }
 
 /* FONDO SECCIÓN SOBRE MÍ */
+
 #sobre-mi {
-    background:
-        radial-gradient(
-            circle at 75% 45%,
-            rgba(0, 132, 255, 0.07) 0%,
-            rgba(0, 132, 255, 0.02) 50%,
-            transparent 55%
+    background-image:
+        linear-gradient(
+            rgba(10, 12, 16, 0.932),
+            rgba(10, 12, 16, 0.914)
         ),
-        #111111;
+        url("../assets/sobre mi/fondo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     color: #ffffff;
-    padding: 110px 5%;
+    padding: 60px 5%;
 }
-
 /* INFORMACIÓN */
 
 .sobre-mi-info {
@@ -672,9 +542,7 @@ body {
 
 .sobre-mi-descripcion {
     margin: 0;
-
     color: #bdbdbd;
-
     font-size: 17px;
     line-height: 1.8;
 }
@@ -684,31 +552,25 @@ body {
 .sobre-mi-datos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
     gap: 20px;
-
     margin-top: 45px;
 }
 
 .dato {
-    padding-top: 20px;
-
-    border-top: 1px solid #3a3a3a;
+    padding-top: 18px;
+    border-top: 1px solid #ff8a00;
+    text-align: center;
 }
 
 .dato strong {
     display: block;
-
     color: #ff8a00;
-
     font-size: 32px;
-
     margin-bottom: 8px;
 }
 
 .dato span {
     color: #d5d5d5;
-
     font-size: 14px;
 }
 
@@ -716,10 +578,24 @@ body {
    02 - PROYECTOS
 ======================================== */
 
+/* FONDO SECCIÓN PROYECTOS */
+
 #proyectos {
-    background-color: #0b0b0b;
+    background:
+        radial-gradient(
+            ellipse at 85% 20%,
+            rgba(47, 47, 47, 0.768),
+            transparent 55%
+        ),
+        linear-gradient(
+            135deg,
+            #111111 0%,
+            #1b2026 50%,
+            #0c0e12 100%
+        );
+
     color: #ffffff;
-    padding: 100px 5%;
+    padding: 50px 5%;
 }
 
 .proyectos-contenedor {
@@ -731,6 +607,10 @@ body {
 /* ENCABEZADO */
 
 .proyectos-encabezado {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr);
+    column-gap: 22px;
+    align-items: start;
     margin-bottom: 25px;
 }
 
@@ -738,6 +618,7 @@ body {
 
 .proyectos-intro {
     max-width: 700px;
+    margin-left: 46px;
     margin-bottom: 50px;
 }
 
@@ -766,6 +647,9 @@ body {
     background: #171717;
     border: 1px solid #2a2a2a;
     cursor: pointer;
+    box-shadow:
+        0 20px 45px rgba(60, 60, 60, 0.35),
+        0 0 30px rgba(17, 17, 17, 0.12);
 
     transition:
         transform 0.35s ease,
@@ -866,6 +750,11 @@ body {
         rgba(0, 0, 0, 0.05) 100%
     );
 }
+
+/* ========================================
+   06. GALERÍA
+======================================== */
+
 /* ========================================
    GALERÍA DE PROYECTOS
 ======================================== */
@@ -982,7 +871,6 @@ body {
     overflow: hidden;
 }
 
-
 /* ========================================
    TODAS LAS FOTOS
 ======================================== */
@@ -1012,7 +900,6 @@ body {
 
     border-radius: 16px;
 }
-
 
 /* ========================================
    FOTO CENTRAL
@@ -1051,7 +938,6 @@ body {
 .galeria-slide-activa img.con-zoom:active {
     cursor: grabbing;
 }
-
 
 /* ========================================
    FOTO IZQUIERDA
@@ -1191,9 +1077,22 @@ body {
    03 · PROCESOS
 ======================================== */
 
-.procesos {
-    background: #0d0d0d;
-    padding: 110px 6%;
+#procesos {
+    background:
+        radial-gradient(
+            ellipse at 85% 20%,
+            rgba(47, 47, 47, 0.768),
+            transparent 55%
+        ),
+        linear-gradient(
+            135deg,
+            #111111 0%,
+            #1b2026 50%,
+            #0c0e12 100%
+        );
+
+    color: #ffffff;
+    padding: 50px 5%;
 }
 
 .procesos-contenedor {
@@ -1206,29 +1105,30 @@ body {
 /* ========================================
    ENCABEZADO
 ======================================== */
-
 .procesos-encabezado {
     display: grid;
-    grid-template-columns: 70px 1fr;
-    gap: 25px;
+    grid-template-columns: 24px minmax(0, 1fr);
+    column-gap: 22px;
     align-items: start;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 .procesos-encabezado .seccion-numero {
     color: #ff8a00;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 700;
-    padding-top: 7px;
+    padding-top: 0;
+    line-height: 1.5;
 }
 
 .procesos-encabezado .seccion-etiqueta {
     display: block;
     color: #ff8a00;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
-    letter-spacing: 3px;
-    margin-bottom: 12px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    margin-bottom: 8px;
 }
 
 .procesos-encabezado h2 {
@@ -1266,7 +1166,7 @@ body {
     position: relative;
     min-width: 0;
     border-top: 1px solid #333333;
-    padding-top: 20px;
+    padding-top: 15px;
     transition:
         transform 0.35s ease,
         border-color 0.35s ease;
@@ -1283,7 +1183,7 @@ body {
 .proceso-numero {
     display: block;
     color: #ff8a00;
-    font-size: 13px;
+    font-size: 10px;
     font-weight: 700;
     margin-bottom: 18px;
 }
@@ -1296,7 +1196,7 @@ body {
 .proceso-imagen {
     position: relative;
     width: 100%;
-    height: 240px;
+    height: 220px;
     overflow: hidden;
     border-radius: 4px;
     background: #181818;
@@ -1329,13 +1229,12 @@ body {
     transform: scale(1.05);
 }
 
-
 /* ========================================
    INFORMACIÓN
 ======================================== */
 
 .proceso-info h3 {
-    color: #ffffff;
+    color: #ff8a00;
     font-size: 24px;
     margin: 0 0 13px;
 }
@@ -1349,45 +1248,46 @@ body {
 
 .proceso-info span {
     display: block;
-    color: #707070;
+    color: #949494cb;
     font-size: 12px;
     line-height: 1.6;
     text-transform: uppercase;
     letter-spacing: 0.7px;
 }
 
+/* ========================================
+   08. RESPONSIVE — TABLET (hasta 1000px)
+======================================== */
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+
+    #inicio {
+        background-position: 60% center;
+    }
+
+    #inicio .inicio-contenido {
+        max-width: 650px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .nav-menu { gap: 22px; }
+    .nav-menu a { font-size: 15px; }
+    .inicio-barra { gap: 25px; }
+    .sobre-mi-grid { gap: 35px; }
+    .proyectos-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .galeria-modal { padding: 30px 24px; }
+    .galeria-contenido { height: min(60vh, 540px); }
+    .galeria-slide-activa { width: min(72vw, 720px); height: min(52vh, 520px); }
+    .galeria-slide-anterior, .galeria-slide-siguiente { width: 32vw; height: 32vh; }
+}
 
 /* ========================================
-   INDICADOR DEL RECORRIDO
+   09. RESPONSIVE — PROCESOS TABLET (hasta 900px)
 ======================================== */
-
-.proceso-item:not(:last-child)::after {
-    content: "→";
-    position: absolute;
-    top: 10px;
-    right: -16px;
-
-    color: #ff8a00;
-    background: #0d0d0d;
-
-    padding: 0 5px;
-
-    font-size: 17px;
-    line-height: 1;
-
-    z-index: 5;
-
-    opacity: 0.65;
-    transition:
-        opacity 0.3s ease,
-        transform 0.3s ease;
-}
-
-.proceso-item:hover::after {
-    opacity: 1;
-    transform: translateX(3px);
-}
-
 /* ========================================
    PROCESOS - TABLET Y MÓVIL
 ======================================== */
@@ -1519,106 +1419,1338 @@ body {
     }
 }
 
-
 /* ========================================
-   MÓVILES PEQUEÑOS
+   10. RESPONSIVE — MÓVIL (hasta 768px)
 ======================================== */
+/* ==================================================
+   MÓVIL
+================================================== */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    /* PROYECTOS - AJUSTE MÓVIL */
 
-    .procesos {
-        padding: 70px 18px;
+#proyectos .proyectos-encabezado {
+    grid-template-columns: 18px minmax(0, 1fr);
+    column-gap: 10px;
+}
+
+#proyectos .proyectos-intro {
+    margin-left: 28px;
+    max-width: calc(100% - 28px);
+}
+
+    #inicio .profesion-linea {
+    display: inline;
+}
+
+#inicio .profesion-linea + .profesion-linea::before {
+    content: " ";
+    white-space: pre;
+}
+
+#inicio .inicio-profesion {
+    font-size: clamp(10px, 4vw, 13px);
+    line-height: 1.3;
+    letter-spacing: 1px;
+    text-wrap: balance;
+}
+
+    header {
+        position: fixed;
+        background: rgba(10, 10, 10, 0.95);
     }
 
-    .procesos-encabezado {
-        display: block;
-        margin-bottom: 45px;
+    nav {
+        width: calc(100% - 24px);
+        height: 64px;
+        position: relative;
     }
 
-    .procesos-encabezado .seccion-numero {
-        display: block;
-        margin-bottom: 8px;
-        padding: 0;
+    .language-selector {
+        margin-left: auto;
+        margin-right: 12px;
     }
 
-    .procesos-encabezado h2 {
-        font-size: 36px;
-        line-height: 1.08;
+    .nav-menu {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        width: 100%;
+        padding: 50px 20px 22px;
+        background: rgba(10, 10, 10, 0.98);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.25s ease;
+        pointer-events: none;
+    }
+
+    .nav-menu.activo {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        color: #ffffff;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    #inicio {
+        min-height: 100svh;
+
+        padding: 120px 24px 45px;
+
+        align-items: flex-end;
+
+        background-position: 62% center;
+
+        background-image:
+            linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.15) 0%,
+                rgba(0, 0, 0, 0.25) 35%,
+                rgba(0, 0, 0, 0.90) 70%,
+                rgba(0, 0, 0, 0.98) 100%
+            ),
+            url("../assets/img/julio-portada.png");
+    }
+
+/* CONTENIDO */
+
+    #inicio .inicio-contenido {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    .inicio-saludo {
+        font-size: 45px;
+    }
+
+
+    #inicio h1 {
+        font-size: clamp(48px, 15vw, 70px);
         margin-bottom: 18px;
     }
 
-    .procesos-encabezado p {
-        font-size: 15px;
-    }
 
-    .proceso-item {
-        padding-left: 35px;
-        padding-bottom: 50px;
-    }
-
-    .proceso-item::before {
-        left: 6px;
-    }
-
-    .proceso-numero::before {
-        left: -34px;
-    }
-
-    .proceso-imagen {
-        max-width: 450px;
-        height: 200px;
-    }
-
-    .proceso-info h3 {
+    #inicio h2 {
         font-size: 24px;
+    }
+
+
+    .inicio-descripcion {
+        font-size: 16px;
+    }
+
+
+    .inicio-botones {
+        gap: 12px;
     }
 }
 
-/* ========================================
-   INICIO - BARRA DE ESPECIALIDADES MÓVIL
-======================================== */
+/* ============================================================
+   11. DISEÑO MÓVIL — 768px o menos
+   Sólo modifica pantallas pequeñas; escritorio permanece intacto.
+============================================================ */
+@media (max-width: 768px) {
+    /* INICIO: fotografía, contenido y especialidades separados */
+    #inicio {
+        min-height: 100svh;
+        height: auto;
+        padding: 85px 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-end;
+        background-position: 60% center;
+        background-image: linear-gradient(180deg,
+            rgba(0,0,0,.12) 0%, rgba(0,0,0,.28) 25%,
+            rgba(0,0,0,.72) 58%, rgba(0,0,0,.96) 100%),
+            url("../assets/img/julio-portada.png");
+    }
+    #inicio .inicio-contenido {
+        flex: 1;
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 85px 0 28px;
+    }
+    .inicio-saludo, #inicio h1, #inicio h2, .inicio-descripcion {
+        transform: none;
+    }
+    .inicio-saludo { font-size: clamp(26px, 8vw, 34px); margin-bottom: 8px; }
+    #inicio h1 { font-size: clamp(46px, 12vw, 62px); line-height: 1.02; margin-bottom: 16px; }
+    #inicio h2 { font-size: clamp(19px, 5.2vw, 24px); line-height: 1.25; margin-bottom: 14px; }
+    .inicio-descripcion { max-width: 100%; font-size: 14px; line-height: 1.6; margin-bottom: 0; }
+    .inicio-botones { display: flex; flex-wrap: nowrap; gap: 10px; margin-top: 24px; }
+    .inicio-botones .btn { min-width: 0; padding: 12px 13px; font-size: 13px; white-space: nowrap; }
+    .inicio-barra {
+        position: relative;
+        left: auto; bottom: auto;
+        width: calc(100% + 40px);
+        margin: 0 -20px;
+        padding: 16px 12px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px 8px;
+        background: #0b0b0b;
+    }
+    .especialidad { min-width: 0; flex-direction: column; justify-content: flex-start; align-items: center; gap: 7px; text-align: center; font-size: 11px; line-height: 1.3; }
+    .especialidad-icono { width: auto; height: auto; justify-content: center; font-size: 22px; }
+
+    /* SOBRE MÍ: degradado, foto protagonista, indicadores en tarjetas */
+    #sobre-mi {
+        min-height: auto;
+        padding: 85px 20px 75px;
+        background: radial-gradient(ellipse at 90% 30%, rgba(255,138,0,.13), transparent 55%),
+                    linear-gradient(160deg, #181818 0%, #101010 58%, #19130d 100%);
+    }
+    .seccion-encabezado { gap: 12px; margin-bottom: 30px; }
+    .seccion-numero { color: #ff8a00; font-size: 14px; }
+    .seccion-etiqueta { color: #ff8a00; font-size: 12px; letter-spacing: 2px; }
+    .seccion-encabezado h2 { font-size: clamp(28px, 8vw, 36px); line-height: 1.12; }
+    .sobre-mi-grid { grid-template-columns: minmax(0, 1fr); gap: 27px; }
+    .imagen-placeholder { height: clamp(260px, 80vw, 365px); border-radius: 16px; }
+    .sobre-mi-info { max-width: none; }
+    .sobre-mi-destacado { font-size: clamp(20px, 5.5vw, 24px); line-height: 1.4; margin-bottom: 17px; }
+    .sobre-mi-descripcion { font-size: 14px; line-height: 1.8; }
+    .sobre-mi-datos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; margin-top: 28px; }
+    .dato { min-width: 0; border: 1px solid rgba(255,138,0,.15); border-radius: 12px; background: rgba(255,255,255,.035); padding: 15px 8px; }
+    .dato strong { font-size: clamp(21px, 6vw, 27px); margin-bottom: 6px; }
+    .dato span { font-size: 10px; line-height: 1.35; display: block; overflow-wrap: anywhere; }
+
+    /* PROYECTOS: cuadrícula de dos columnas, tarjetas compactas */
+    #proyectos { padding: 75px 18px 75px; }
+    .proyectos-encabezado { margin-bottom: 18px; }
+    .proyectos-intro { margin-bottom: 12px; }
+    .proyectos-intro p { font-size: 14px; line-height: 1.7; }
+    .proyectos-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .proyecto-card { min-height: 0; height: auto; aspect-ratio: 3 / 3; border-radius: 13px; }
+    .proyecto-info { left: 12px; right: 10px; bottom: 14px; }
+    .proyecto-info span { font-size: 11px; margin-bottom: 5px; }
+    .proyecto-info h3 { font-size: clamp(13px, 3.7vw, 17px); line-height: 1.2; margin-bottom: 2px; overflow-wrap: anywhere; }
+    .proyecto-info p { font-size: 10px; line-height: 1.3; }
+    .proyecto-card:hover { transform: none; }
+
+    /* PROCESOS: tarjetas horizontales, con miniatura y descripción */
+    .procesos { padding: 70px 18px 20px; }
+    .procesos-encabezado { display: block; margin-bottom: 28px; }
+    .procesos-encabezado .seccion-numero { display: block; padding: 0; margin-bottom: 8px; font-size: 14px; }
+    .procesos-encabezado h2 { font-size: clamp(28px, 8vw, 37px); margin-bottom: 10px; }
+    .procesos-encabezado p { font-size: 14px; line-height: 1.65; }
+    .procesos-lista { display: grid; grid-template-columns: 1fr; gap: 12px; }
+    .proceso-item {
+        display: grid;
+        grid-template-columns: minmax(95px, 36%) minmax(0, 1fr);
+        gap: 12px;
+        align-items: center;
+        padding: 32px 12px 12px;
+        border: 1.3px solid #ff8a00;
+        border-radius: 13px;
+        background: #181818;
+    }
+    .proceso-item::before, .proceso-numero::before, .proceso-item:not(:last-child)::after { display: none; }
+    .proceso-numero { position: absolute; left: 12px; top: 10px; margin: 0; font-size: 12px; }
+    .proceso-imagen { width: 100%; height: 110px; max-width: none; margin: 0; border-radius: 8px; }
+    .proceso-info { min-width: 0; }
+    .proceso-info h3 { font-size: 18px; margin-bottom: 7px; }
+    .proceso-info p { font-size: 12px; line-height: 1.5; margin-bottom: 7px; }
+    .proceso-info span { font-size: 9px; line-height: 1.4; letter-spacing: .25px; }
+
+    /* GALERÍA Y BOTÓN FLOTANTE */
+    .galeria-modal { padding: 70px 12px 30px; }
+    .galeria-cerrar { top: 12px; right: 12px; width: 42px; height: 42px; font-size: 35px; }
+    .galeria-titulo { margin-bottom: 10px; padding: 0 6px; }
+    .galeria-titulo h2 { font-size: 19px; }
+    .galeria-contenido { height: min(65svh, 500px); }
+    .galeria-slide-activa { width: calc(100% - 10px); height: min(55svh, 430px); }
+    .galeria-slide-anterior, .galeria-slide-siguiente { display: none; }
+    .galeria-flecha { width: 42px; height: 42px; font-size: 27px; }
+    .galeria-anterior { left: 4px; }
+    .galeria-siguiente { right: 4px; }
+    .galeria-contador { margin-top: 8px; }
+    .btn-subir { width: 40px; height: 40px; right: 12px; bottom: 14px; font-size: 20px; }
+}
+
+@media (max-width: 360px) {
+    .inicio-botones .btn { font-size: 12px; padding: 11px 9px; }
+    .proyecto-info h3 { font-size: 13px; }
+    .proceso-item { grid-template-columns: 95px minmax(0, 1fr); gap: 9px; }
+}
+
+
+/* ==========================================
+   INICIO - NUEVO DISEÑO MÓVIL
+========================================== */
 
 @media (max-width: 768px) {
 
-    .inicio-barra {
-        position: relative;
+    #inicio {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+
+        min-height: auto;
+        padding: 0;
+
+        background-image: none;
+        background-color: #101010;
+    }
+
+    /* Fotografía superior */
+
+    #inicio::before {
+        content: "";
+        display: block;
 
         width: 100%;
+        height: 450px;
+
+        background-image:linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.05) 50%,
+            rgba(0, 0, 0, 0.10) 75%,
+            rgba(0, 0, 0, 0.45) 85%,
+            rgba(0, 0, 0, 0.90) 100%
+        ),
+        url("../assets/img/julio-portada.png");
+        background-size: cover;
+        background-position: 78% center;
+        background-repeat: no-repeat;
+
+        flex-shrink: 0;
+    }
+
+    /* Contenedor de textos */
+
+    #inicio .inicio-contenido {
+        width: calc(100% - 28px);
+        max-width: none;
+
+        margin: -25px auto 0;
+        padding: 24px 20px;
+
+        background: linear-gradient(
+    150deg,
+    #080808 0%,
+    #222222 45%,
+    #201e1d 100%
+);
+        border: 1.8px solid #ff8a00;
+        border-radius: 15px;
+
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Tipografía */
+
+    .inicio-saludo,
+    #inicio h1,
+    #inicio h2,
+    .inicio-descripcion {
+        transform: none;
+    }
+
+    .inicio-saludo {
+        font-size: 23px;
+        margin-bottom: 8px;
+    }
+
+    #inicio h1 {
+        font-size: clamp(36px, 9vw, 43px);
+        line-height: 1.1;
+        margin-bottom: 12px;
+        color: #ff8a00;
+    }
+
+    #inicio h2 {
+        font-size: 14.5px;
+        line-height: 1.4;
+        margin-bottom: 12px;
+    }
+
+    .inicio-descripcion {
+        font-size: 13px;
+        line-height: 1.65;
+        margin-bottom: 20px;
+    }
+
+    /* Botones principales */
+
+    .inicio-botones {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .inicio-botones .btn {
+        width: 100%;
+        min-height: 45px;
+        padding: 10px 8px;
+
+        font-size: 12px;
+        border-radius: 9px;
+        text-align: center;
+    }
+
+    .btn-principal {
+        background: #ff8a00;
+        color: #111111;
+        border-color: #ff8a00;
+    }
+
+    /* Especialidades debajo de la portada */
+
+    .inicio-barra {
+        position: static;
+
+        width: calc(100% - 28px);
+        margin: 14px auto 24px;
+        padding: 0;
 
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
 
-        gap: 8px;
-
-        padding: 14px 12px;
-
-        background: #0b0b0b;
+        background: transparent;
+        backdrop-filter: none;
     }
 
     .especialidad {
-        min-width: 0;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-
-        gap: 7px;
-
-        text-align: center;
-
-        font-size: 12px;
-        line-height: 1.25;
-    }
-
-    .especialidad-icono {
-        width: auto;
-        height: auto;
-
         display: flex;
         align-items: center;
         justify-content: center;
 
-        font-size: 22px;
+        min-height: 48px;
+        padding: 8px 5px;
+
+        
+        border: 1.2px solid #efefef;
+        background: linear-gradient(
+            150deg,
+            #101010 45%,
+            #000000 100%
+        );
+        border-radius: 9px;
+
+        font-size: 11px;
+        line-height: 1.3;
+        text-align: center;
     }
+
+    /* Ocultar iconos solo en móvil */
+
+    .especialidad-icono {
+        display: none;
+    }
+}
+
+
+/* ==========================================
+   SOBRE MÍ - DISEÑO MÓVIL
+========================================== */
+
+@media (max-width: 768px) {
+
+    #sobre-mi {
+        min-height: auto;
+        padding: 75px 20px 65px;
+
+        background:
+            radial-gradient(
+                circle at 85% 15%,
+                rgba(161, 156, 151, 0.12),
+                transparent 48%
+            ),
+            linear-gradient(
+                160deg,
+                #353535 0%,
+                #202020 55%,
+                #090909 100%
+            );
+    }
+
+    .sobre-mi-contenedor {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Encabezado */
+
+    #sobre-mi .seccion-encabezado {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    #sobre-mi .seccion-encabezado h2 {
+        font-size: clamp(27px, 7.5vw, 34px);
+        line-height: 1.15;
+    }
+
+    /* Fotografía y contenido */
+
+    .sobre-mi-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .sobre-mi-imagen {
+        width: 100%;
+        min-width: 0;
+    }
+
+.imagen-placeholder {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.imagen-placeholder img {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    display: block;
+
+    object-fit: cover;
+    object-position: center top;
+}
+
+    /* Textos */
+
+    .sobre-mi-info {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .sobre-mi-destacado {
+        font-size: 21px;
+        line-height: 1.4;
+        margin-bottom: 16px;
+    }
+
+    .sobre-mi-descripcion {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    /* Indicadores profesionales */
+
+    .sobre-mi-datos {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 28px;
+    }
+
+    .dato {
+        min-width: 0;
+        min-height: 90px;
+        padding: 15px 8px;
+
+        background: linear-gradient(
+            145deg,
+            #292521,
+            #171717
+        );
+
+        border: 1.5px solid #ff8a00;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .dato strong {
+        display: block;
+        color: #ff8a00;
+        font-size: 25px;
+        margin-bottom: 8px;
+    }
+
+    .dato span {
+        display: block;
+        color: #cccccc;
+        font-size: 11px;
+        line-height: 1.4;
+    }
+}
+
+
+/* ==========================================
+   ENCABEZADOS DE SECCIONES - MÓVIL
+========================================== */
+
+@media (max-width: 768px) {
+
+    #sobre-mi .seccion-encabezado,
+    #proyectos .seccion-encabezado,
+    #procesos .procesos-encabezado {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        column-gap: 12px;
+        align-items: start;
+    }
+
+    #sobre-mi .seccion-numero,
+    #proyectos .seccion-numero,
+    #procesos .seccion-numero {
+        padding-top: 0;
+        margin-top: 0;
+        line-height: 1.4;
+        color: #ff8a00;
+    }
+
+    #sobre-mi .seccion-etiqueta,
+    #proyectos .seccion-etiqueta,
+    #procesos .seccion-etiqueta {
+        display: block;
+        margin: 0 0 8px;
+        line-height: 1.4;
+        color: #ff8a00;
+    }
+}
+
+
+/* ==========================================
+   04. CONTÁCTAME - DISEÑO GENERAL
+========================================== */
+
+#contactame {
+    background-image:
+        linear-gradient(
+            rgba(10, 12, 16, 0.932),
+            rgba(10, 12, 16, 0.914)
+        ),
+        url("../assets/sobre mi/fondo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+    padding: 60px 5%;
+}
+
+.contacto-contenedor {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   ENCABEZADO
+========================================== */
+
+.contacto-encabezado {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.contacto-encabezado .seccion-numero,
+.contacto-encabezado .seccion-etiqueta {
+    color: #ff8a00;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+/* ==========================================
+   DISTRIBUCIÓN DE COLUMNAS
+========================================== */
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 65px;
+    align-items: center;
+}
+
+/* ==========================================
+   PRESENTACIÓN IZQUIERDA
+========================================== */
+
+.contacto-presentacion h2 {
+    margin: 0 0 25px;
+    font-size: clamp(34px, 3.6vw, 56px);
+    line-height: 1.12;
+    font-weight: 700;
+}
+
+.contacto-linea {
+    width: 90px;
+    height: 4px;
+    background: #ff8a00;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.contacto-presentacion p {
+    margin: 0 0 20px;
+    color: #bdbdbd;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.contacto-especialidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.contacto-especialidades span {
+    padding: 9px 14px;
+    background: #242424;
+    border: 1px solid #646464;
+    border-radius: 30px;
+    color: #ff8a00;
+    font-size: 13px;
+}
+
+/* ==========================================
+   TARJETA PROFESIONAL
+========================================== */
+
+.contacto-tarjeta {
+    min-width: 0;
+    padding: 30px;
+
+    background: linear-gradient(
+        145deg,
+        #252525,
+        #1a1a1a
+    );
+
+    border: 1px solid #383838;
+    border-radius: 18px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================
+   PERFIL PROFESIONAL
+========================================== */
+
+.contacto-perfil {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #383838;
+}
+
+.contacto-avatar {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #382719;
+    border-radius: 12px;
+}
+
+.contacto-avatar img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.contacto-perfil-info {
+    min-width: 0;
+}
+
+.contacto-perfil-info h3 {
+    margin: 0 0 6px;
+    font-size: 21px;
+}
+
+.contacto-perfil-info p {
+    margin: 0;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+
+/* ==========================================
+   DATOS DE CONTACTO
+========================================== */
+
+.contacto-detalles {
+    display: grid;
+    gap: 23px;
+    padding: 28px 0;
+}
+
+.contacto-dato {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    min-width: 0;
+}
+
+/* Contenedor de iconos */
+
+.contacto-icono {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tamaño general de SVG */
+
+.contacto-icono img {
+    display: block;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+/* ==========================================
+   TAMAÑOS INDIVIDUALES DE ICONOS
+   MODIFICA AQUÍ CADA ICONO
+========================================== */
+
+/* Teléfono */
+.icono-telefono img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Correo electrónico */
+.icono-correo img {
+    width: 22px;
+    height: 22px;
+}
+
+/* Ubicación */
+.icono-ubicacion img {
+    width: 22px;
+    height: 22px;
+}
+
+/* ==========================================
+   TEXTOS DE CONTACTO
+========================================== */
+
+.contacto-dato > div {
+    min-width: 0;
+}
+
+.contacto-dato small {
+    display: block;
+    margin-bottom: 6px;
+    color: #aaaaaa;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+.contacto-dato p,
+.contacto-dato a {
+    display: block;
+    margin: 0;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contacto-dato a:hover {
+    color: #ff8a00;
+}
+
+/* ==========================================
+   BOTONES DE CONTACTO
+========================================== */
+
+.contacto-acciones {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.contacto-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-width: 0;
+    min-height: 54px;
+    padding: 12px 10px;
+
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+/* Tamaños individuales de iconos de botones */
+
+.contacto-btn-principal img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.contacto-btn-secundario img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+/* Botón Descargar CV */
+
+.contacto-btn-principal {
+    background: #ff8a00;
+    color: #111111;
+    border: 1px solid #ff8a00;
+}
+
+.contacto-btn-principal:hover {
+    background: #ff9e2c;
+    transform: translateY(-3px);
+}
+/* Efecto hover del icono WhatsApp */
+
+.contacto-btn-secundario img {
+    transition: filter 0.3s ease;
+}
+
+/* Botón WhatsApp */
+
+.contacto-btn-secundario {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #666666;
+}
+
+.contacto-btn-secundario:hover {
+    border-color: #ff8a00;
+    color: #ff8a00;
+    transform: translateY(-3px);
+}
+/* WHATSAPP - SVG CON COLOR AUTOMÁTICO */
+
+.whatsapp-svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    fill: currentColor;
+}
+
+.contacto-btn-secundario {
+    color: #ffffff;
+}
+
+.contacto-btn-secundario:hover {
+    color: #ff8a00;
+    border-color: #ff8a00;
+}
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media (max-width: 1024px) {
+
+    #contactame {
+        padding: 85px 5%;
+    }
+
+    .contacto-grid {
+        gap: 30px;
+    }
+
+    .contacto-tarjeta {
+        padding: 24px;
+    }
+
+    .contacto-presentacion h2 {
+        font-size: clamp(30px, 4vw, 42px);
+    }
+}
+
+/* ==========================================
+   MÓVILES
+========================================== */
+
+@media (max-width: 768px) {
+
+    #contactame {
+        padding: 35px 18px 65px;
+    }
+
+#contactame .contacto-encabezado {
+    display: grid;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+
+#contactame .contacto-encabezado .seccion-numero {
+    position: static;
+    padding-top: 0;
+    margin: 0;
+    line-height: 1.5;
+}
+/* CONTACTO - ALINEACIÓN DE TEXTOS EN MÓVIL */
+
+/* Mantener el número y la etiqueta */
+#contactame .contacto-encabezado {
+    display: grid;
+    grid-template-columns: 18px minmax(0, 1fr);
+    column-gap: 10px;
+    align-items: start;
+}
+
+/* Alinear título y descripción con CONTÁCTAME */
+#contactame .contacto-presentacion {
+    margin-left: 25px;
+    width: calc(100% - 28px);
+    min-width: 0;
+}
+
+#contactame .contacto-encabezado .seccion-etiqueta {
+    margin: 0;
+    line-height: 1.5;
+}
+
+    .contacto-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    .contacto-presentacion h2 {
+        font-size: clamp(28px, 7vw, 38px);
+        line-height: 1.15;
+        margin-bottom: 20px;
+    }
+
+    .contacto-linea {
+        width: 75px;
+        margin-bottom: 22px;
+    }
+
+    .contacto-presentacion p {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 15px;
+    }
+
+    .contacto-especialidades {
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    .contacto-especialidades span {
+        padding: 8px 11px;
+        font-size: 11px;
+    }
+
+    .contacto-tarjeta {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .contacto-perfil {
+        gap: 12px;
+        padding-bottom: 20px;
+    }
+
+    .contacto-avatar {
+        width: 48px;
+        height: 48px;
+    }
+
+    .contacto-avatar img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .contacto-perfil-info h3 {
+        font-size: 18px;
+    }
+
+    .contacto-perfil-info p {
+        font-size: 12px;
+    }
+
+    .contacto-detalles {
+        gap: 20px;
+        padding: 23px 0;
+    }
+
+    .contacto-dato {
+        gap: 12px;
+    }
+
+    .contacto-dato p,
+    .contacto-dato a {
+        font-size: 14px;
+    }
+
+    .contacto-btn {
+        min-height: 48px;
+        font-size: 12px;
+        gap: 7px;
+    }
+}
+
+/* ==========================================
+   MÓVILES PEQUEÑOS
+========================================== */
+
+@media (max-width: 360px) {
+
+    #contactame {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .contacto-tarjeta {
+        padding: 15px;
+    }
+
+    .contacto-acciones {
+        gap: 8px;
+    }
+
+    .contacto-btn {
+        padding: 10px 6px;
+        font-size: 11px;
+    }
+
+    .contacto-btn-principal img,
+    .contacto-btn-secundario img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+
+/* ==========================================
+   05. FOOTER - PIE DE PÁGINA
+========================================== */
+
+.footer {
+    background: #212121;
+    border-top: 1px solid #393939;
+    color: #ffffff;
+    padding: 5px 5% 8px;
+}
+
+.footer-contenedor {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+/* PARTE SUPERIOR */
+
+.footer-superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 2px;
+}
+
+/* LOGOTIPO */
+
+.footer-identidad {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    min-width: 0;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.footer-logo img {
+    display: block;
+    width: 35px;       /* Ancho del logotipo */
+    height: 35px;      /* Alto del logotipo */
+    object-fit: contain;
+}
+
+.footer-identidad p {
+    margin: 0;
+    max-width: 200px;
+    color: #999999;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ADAPTACIÓN MÓVIL */
+
+@media (max-width: 768px) {
+
+    .footer-identidad {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        text-align: left;
+    }
+
+    .footer-logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-identidad p {
+        font-size: 12px;
+        max-width: 210px;
+    }
+}
+
+/* ENLACES */
+
+.footer-navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.footer-navegacion a {
+    color: #bbbbbb;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.footer-navegacion a:hover {
+    color: #ff8a00;
+}
+
+/* PARTE INFERIOR */
+
+.footer-inferior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+    padding-top: 15px;
+    border-top: 1px solid #292929;
+}
+
+.footer-inferior p,
+.footer-inferior span {
+    margin: 0;
+    color: #777777;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   FOOTER - TABLETS
+========================================== */
+
+@media (max-width: 1024px) {
+
+    .footer-superior {
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .footer-navegacion {
+        gap: 15px;
+    }
+
+}
+
+/* ==========================================
+   FOOTER - MÓVILES
+========================================== */
+
+@media (max-width: 768px) {
+
+    .footer {
+        padding: 25px 20px 25px;
+    }
+
+    .footer-superior {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding-bottom: 15px;
+    }
+
+    .footer-logo {
+        font-size: 34px;
+    }
+
+    .footer-identidad p {
+        max-width: 280px;
+        font-size: 12px;
+    }
+
+    .footer-navegacion {
+        justify-content: center;
+        gap: 14px 20px;
+    }
+
+    .footer-navegacion a {
+        font-size: 12px;
+    }
+
+    .footer-inferior {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .footer-inferior p,
+    .footer-inferior span {
+        font-size: 11px;
+    }
+
 }
